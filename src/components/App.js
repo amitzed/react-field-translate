@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Client from './Client';
+
 class App extends React.Component {
   state = { language: 'english'};
 
@@ -19,7 +21,7 @@ class App extends React.Component {
           <i className="flag hk" onClick={()=> this.onLanguageChange('cantonese')} style={{marginRight: '1.5em'}}  />
         </div>
 
-        {this.state.language}
+        <Client />
       </div>
     )
   }
