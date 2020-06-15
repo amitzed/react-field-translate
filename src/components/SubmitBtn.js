@@ -3,18 +3,22 @@ import React from 'react';
 import LanguageContext from '../contexts/LanguageContext';
 
 class SubmitBtn extends React.Component {
-  static contextType = LanguageContext;
+  renderSubmit(value) {
+    return value === 'english' ? 'Submit' :
+           value === 'bengali' ? 'জমা দিন' :
+           value === 'botswana' ? 'Romela' :
+           value === 'german' ? 'Einreichen' :
+           value === 'cantonese' ? '名稱' :
+           'wha'
+  }
 
   render() {
-    // const text = this.context === 'english' ? 'Submit' : 'Voorleggen';
-    const text = this.context === 'english' ? 'Submit' :
-                  this.context === 'bengali' ? 'জমা দিন' :
-                  this.context === 'botswana' ? 'Romela' :
-                  this.context === 'german' ? 'Einreichen' :
-                  this.context === 'cantonese' ? '名稱' :
-                                  'Submit';
     return (
-      <button className="ui button primary">{text}</button>
+      <button className="ui button primary">
+        <LanguageContext.Consumer>
+          { (value) => this.renderSubmit(value) }
+        </LanguageContext.Consumer>
+      </button>
     )
   }
 }
