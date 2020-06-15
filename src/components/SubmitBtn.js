@@ -9,14 +9,14 @@ class SubmitBtn extends React.Component {
            value === 'botswana' ? 'Romela' :
            value === 'german' ? 'Einreichen' :
            value === 'cantonese' ? '名稱' :
-           'wha'
+           'Submit'
   }
 
   render() {
     return (
       <button className="ui button primary">
         <LanguageContext.Consumer>
-          { (value) => this.renderSubmit(value) }
+          { ({ language }) => this.renderSubmit(language) }
         </LanguageContext.Consumer>
       </button>
     )

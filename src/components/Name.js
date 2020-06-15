@@ -6,12 +6,12 @@ class Name extends React.Component {
   static contextType = LanguageContext;
 
   render() {
-    const text = this.context === 'english' ? 'Name' :
-                 this.context ===  'bengali' ? 'নাম' :
-                 this.context ===  'botswana' ? 'Leina' :
-                 this.context ===  'german' ? 'Name' :
-                 this.context ===  'cantonese' ? '提交' :
-                                  'Name';
+    const text = this.context.language === 'english' ? 'Name' :
+                 this.context.language ===  'bengali' ? 'নাম' :
+                 this.context.language ===  'botswana' ? 'Leina' :
+                 this.context.language ===  'german' ? 'Name' :
+                 this.context.language ===  'cantonese' ? '提交' :
+                                            'Name';
 
     return (
       <div className="ui field">
