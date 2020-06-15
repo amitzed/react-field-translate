@@ -11,7 +11,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="ui container">
+      <div className="ui container" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '5em'}}>
         <div className="wrapper">
           <h4>Choose Your Language:</h4>
           <i className="flag us" onClick={()=> this.onLanguageChange('english')} style={{marginRight: '1.5em', cursor: 'pointer'}} />
