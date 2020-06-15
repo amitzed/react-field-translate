@@ -1,3 +1,4 @@
+import '../style.css';
 import React from 'react';
 
 class App extends React.Component {
@@ -6,7 +7,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="ui container">
-        <div>
+        <div className="wrapper">
           <i className="flag us" />
           <i className="flag bd" />
           <i className="flag bw" />
